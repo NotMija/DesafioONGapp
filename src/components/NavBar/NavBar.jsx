@@ -2,13 +2,15 @@ import { AppBar, Toolbar } from '@mui/material';
 import { NavBarButton } from './ButtonNavBar';
 import { useState } from 'react';
 import { NavBarSubButton } from './SubButtonNavBar';
-import { Outlet } from 'react-router-dom';
+import { Navigate, Outlet, useNavigate } from 'react-router-dom';
 
 export const NavBar = () => {
     const [selectedTab, setSelectedTab] = useState('Dashboard');
+    const navigate = useNavigate();
 
     const handleClick = (tabName) => {
         setSelectedTab(tabName);
+        navigate(tabName.toLowerCase());
     }
 
     const NavBarElements = [
