@@ -2,6 +2,7 @@ import { AppBar, Toolbar } from '@mui/material';
 import { NavBarButton } from './ButtonNavBar';
 import { useState } from 'react';
 import { NavBarSubButton } from './SubButtonNavBar';
+import { Outlet } from 'react-router-dom';
 
 export const NavBar = () => {
     const [selectedTab, setSelectedTab] = useState('Dashboard');
@@ -42,6 +43,7 @@ export const NavBar = () => {
     ];
 
     return (
+        <>
         <AppBar position="static" style={{ backgroundColor: '#364F75', padding: '32px', width: '288px' }}>
             <Toolbar style={{ display: 'flex', flexDirection: 'column', gap: '24px', padding: '24px 8px' }} >
 
@@ -76,5 +78,8 @@ export const NavBar = () => {
                 })}
             </Toolbar>
         </AppBar>
+        <Outlet />
+        </>
+
     );
 };
