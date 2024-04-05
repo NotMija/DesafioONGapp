@@ -6,6 +6,7 @@ import { EducationNursery } from './screens/EducationNursery'
 import { Food } from './screens/Food'
 import { Advocacy } from './screens/Advocacy'
 import { Reports } from './screens/Reports'
+import { AddFood } from './screens/AddFood' 
 
 export const App = () => {
 
@@ -15,8 +16,9 @@ export const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/nursery" element={<EducationNursery />} />
         <Route path="/food" element={<Food />} />
-        <Route path="/advocacy" element={<Advocacy/>} />
-        <Route path="reports" element={<Reports />} />
+        <Route path="/addfood" element={<AddFood />} />
+        <Route path="/advocacy" element={<Advocacy />} />
+        <Route path="/reports" element={<Reports />} />
       </Route>
     </Routes>
   )
