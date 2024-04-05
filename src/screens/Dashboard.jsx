@@ -6,7 +6,7 @@ export const Dashboard = () => {
         <div style={{ width: '100%', height: '100%', backgroundColor: '#E4EBF7' }}>
             <TextH2 iconUrl='src/images/icon/DashboardOrange.svg' name='Dashboard' />
             <div>
-                <EducationCard1 education={{ name: 'Nursery' }} />
+                <EducationCard1 date='03/10-09/10' />
             </div>
         </div>
     );
