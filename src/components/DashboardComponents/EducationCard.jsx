@@ -2,6 +2,7 @@ import { Card, CardContent, Typography } from "@mui/material";
 import { TextH3 } from "../Text/TextH3";
 import { TextBody } from "../Text/TextBody";
 import { TextCaptionsMini } from "../Text/TextCaptionsMini";
+import { TextCaptions } from "../Text/TextCaptions";
 
 export const EducationCard1 = ({ date }) => {
     return (
@@ -11,6 +12,7 @@ export const EducationCard1 = ({ date }) => {
                 <div style={{display: "flex", flexDirection: "row", gap: "8px", justifyContent: 'space-between'}}>
                     <TextBody string={'Asistance last 5 days'} />
                     <TextCaptionsMini string={date} />
+                    <TextCaptions string='since last week' />
                 </div>
             </CardContent>
         </Card>
