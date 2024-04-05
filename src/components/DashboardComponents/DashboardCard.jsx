@@ -9,7 +9,7 @@ export const DashboardCard = ({ name, iconUrl, date, percentage, dateString, des
     return (
         <Card style={{ width: '288px' }}>
             <CardContent>
-                <TextH3 iconUrl={iconUrl} name={name} />
+                <TextH3 iconUrl={iconUrl} name={name} color='#364F75' />
                 <div style={{ display: "flex", flexDirection: "row", gap: "8px", justifyContent: 'space-between' }}>
                     <TextBody string={descriptionString} />
                     <TextCaptionsMini string={date} />
@@ -20,7 +20,7 @@ export const DashboardCard = ({ name, iconUrl, date, percentage, dateString, des
                 <div style={{ display: "flex", flexDirection: "row", gap: "16px" }}>
                     <div style={{ display: "flex", flexDirection: "row", gap: "8px" }}>
                         <img src='src/images/icon/VectorAbajo.svg' alt='down' />
-                        <TextCaptionsBold percentage={percentage} />
+                        <TextCaptionsBold string={percentage} />
                     </div>
                     <TextCaptions string={'since ' + dateString} />
                 </div>
