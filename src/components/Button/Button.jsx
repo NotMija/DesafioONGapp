@@ -23,11 +23,12 @@ const variants = {
     },
 }
 
-export const Button = ({ string, variant = 'primary' }) => {
+export const Button = ({ string, variant = 'primary', onClick }) => {
     const variantStyle = variants[variant];
 
     return (
         <ButtonMaterialUI
+            onClick={() => console.log('Button clicked!')}
             style={{
                 fontSize: '16px',
                 fontStyle: 'normal',
