@@ -1,7 +1,7 @@
-export const TextCaptionsBold = ({percentage}) => {
+export const TextCaptionsBold = ({string}) => {
     return (
         <div style={{ display: 'flex', flexDirection: 'row', gap: '16px', alignItems: 'center' }}>
-            <h2 style={{ color: '#364F75', margin: '0', fontSize: '14px', fontWeight: '700', lineHeight: '16px' }}> {percentage}%</h2>
+            <h2 style={{ color: '#364F75', margin: '0', fontSize: '14px', fontWeight: '700', lineHeight: '16px' }}> {string}</h2>
         </div>
     );
 

@@ -1,8 +1,8 @@
-export const TextH3 = ({iconUrl, name}) => {
+export const TextH3 = ({iconUrl, name, color}) => {
     return (
         <div style={{ display: 'flex', flexDirection: 'row', gap: '16px', alignItems: 'center'}}>
-            <img src={iconUrl} alt={name} />
-            <h2 style={{ color: '#364F75', margin: '0', fontSize: '24px', fontWeight: '700', lineHeight: '32px', letterSpacing: '-1px' }}>{name}</h2>
+            {iconUrl && <img src={iconUrl} />}
+            <h2 style={{ color: color, margin: '0', fontSize: '24px', fontWeight: '700', lineHeight: '32px', letterSpacing: '-1px' }}>{name}</h2>
         </div>
     );
 }
