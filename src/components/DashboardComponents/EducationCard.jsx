@@ -1,12 +1,16 @@
 import { Card, CardContent, Typography } from "@mui/material";
 import { TextH3 } from "../Text/TextH3";
+import { TextBody } from "../Text/TextBody";
+import { TextCaptionsMini } from "../Text/TextCaptionsMini";
 
-export const EducationCard1 = ({ education }) => {
+export const EducationCard1 = ({ date }) => {
     return (
         <Card style={{ width: '288px' }}>
             <CardContent>
-                <div style={{display: 'flex', gap: '16px', justifyContent: 'start'}}>
-                    <TextH3 iconUrl='src/images/icon/NurseryBlue.svg' name='Education' />
+                <TextH3 iconUrl='src/images/icon/NurseryBlue.svg' name='Education' />
+                <div style={{display: "flex", flexDirection: "row", gap: "8px", justifyContent: 'space-between'}}>
+                    <TextBody string={'Asistance last 5 days'} />
+                    <TextCaptionsMini string={date} />
                 </div>
             </CardContent>
         </Card>
