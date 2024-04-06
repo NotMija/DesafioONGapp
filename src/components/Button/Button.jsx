@@ -1,4 +1,5 @@
 import { Button as ButtonMaterialUI } from "@mui/material";
+import { useState } from "react";
 
 const variants = {
     primary: {
@@ -7,7 +8,8 @@ const variants = {
     },
     secondary: {
         backgroundColor: '#FFFFFF',
-        color: '##1A2433',
+        color: '#364F75',
+        border: '1px solid #364F75',
     },
     disabled: {
         backgroundColor: '#FFFFFF',
@@ -24,11 +26,24 @@ const variants = {
 }
 
 export const Button = ({ string, variant = 'primary', onClick }) => {
-    const variantStyle = variants[variant];
+    const [currentVariant, setCurrentVariant] = useState(variant);
+    const variantStyle = variants[currentVariant];
+
+    const handleMouseEnter = () => {
+        setCurrentVariant('hover');
+    };
+
+    const handleMouseLeave = () => {
+        setCurrentVariant(variant);
+    };
+
+
 
     return (
         <ButtonMaterialUI
             onClick={() => console.log('Button clicked!')}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
             style={{
                 fontSize: '16px',
                 fontStyle: 'normal',
@@ -39,7 +54,7 @@ export const Button = ({ string, variant = 'primary', onClick }) => {
                 padding: '11px 16px',
                 justifyContent: 'space-between',
                 alignItems: 'center',
-                ...variantStyle
+                ...variantStyle,
             }}>
             {string}
         </ButtonMaterialUI>

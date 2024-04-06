@@ -20,7 +20,7 @@ export const NurseryCard = ({ }) => {
                         {/* Grafica */}
                     </div>
                     <div style={{ alignContent: 'center' }}>
-                        <Button string='Attendance' />
+                        <Button string='Attendance' variant="secondary" />
                     </div>
                 </CardContent>
             </Card>
