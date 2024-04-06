@@ -3,37 +3,24 @@ import { TextCaptions } from "../Text/TextCaptions"
 import { TextH3 } from "../Text/TextH3"
 
 export const TableAdvocacy = () => {
-
-    const possiblesdatas = [ // Esto deberia de ser el modelo de datos de la BD donaciones
+    const possiblesdatas = [ 
         {
-            donor: 'John Doe',
-            value: '0.00$',
-            purpose: 'School building',
+            name: 'Person Name',
+            help: 'Purpose',
+            status: 'School building',
             date: '05/05/2024'
         },
         {
-            donor: 'Jane Smith',
-            value: '100.00$',
-            purpose: 'Library books',
-            date: '06/06/2024'
+            name: 'Otra Persona',
+            help: 'Otro Propósito',
+            status: 'Construcción de hospital',
+            date: '06/06/2025'
         },
         {
-            donor: 'Bob Johnson',
-            value: '200.00$',
-            purpose: 'Computer lab',
-            date: '07/07/2024'
-        },
-        {
-            donor: 'Alice Williams',
-            value: '300.00$',
-            purpose: 'Sports equipment',
-            date: '08/08/2024'
-        },
-        {
-            donor: 'Charlie Brown',
-            value: '400.00$',
-            purpose: 'Art supplies',
-            date: '09/09/2024'
+            name: 'Tercera Persona',
+            help: 'Propósito Adicional',
+            status: 'Construcción de biblioteca',
+            date: '07/07/2026'
         },
     ]
 
@@ -41,11 +28,11 @@ export const TableAdvocacy = () => {
         <table style={{ padding: '0 0 0 50px' }}>
             <thead style={{ backgroundColor: '#364F75' }}>
                 <tr>
-                    <th style={{ width: '320px', textAlign: 'left', padding: '16px' }}>
+                    <th style={{ width: '280px', textAlign: 'left', padding: '16px' }}>
                         <TextH3 color='#E4EBF7' name='Name' />
                     </th>
                     <th style={{ width: '150px', textAlign: 'left', padding: '16px' }}>
-                        <TextH3 color='#E4EBF7' name='Value' />
+                        <TextH3 color='#E4EBF7' name='Help' />
                     </th>
                     <th style={{ width: '150px', textAlign: 'left', padding: '16px' }}>
                         <TextH3 color='#E4EBF7' name='Status' />
@@ -62,13 +49,13 @@ export const TableAdvocacy = () => {
                     return (
                         <tr key={index}>
                             <td style={{ padding: '16px' }}>
-                                <TextCaptionsBold string={data.donor} />
+                                <TextCaptionsBold string={data.name} />
                             </td>
                             <td style={{ padding: '16px' }}>
-                                <TextCaptions string={data.value} />
+                                <TextCaptions string={data.help} />
                             </td>
                             <td style={{ padding: '16px' }}>
-                                <TextCaptions string={data.purpose} />
+                                <TextCaptions string={data.status} />
                             </td>
                             <td style={{ padding: '16px' }}>
                                 <TextCaptions string={data.date} />

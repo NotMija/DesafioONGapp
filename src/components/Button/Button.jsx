@@ -51,8 +51,9 @@ export const Button = ({ string, variant = 'primary', onClick }) => {
                 lineHeight: 'normal',
                 letterSpacing: '0.15px',
                 display: 'flex',
+                width: '100%',
+                alignSelf: 'center',
                 padding: '11px 16px',
-                justifyContent: 'space-between',
                 alignItems: 'center',
                 ...variantStyle,
             }}>
