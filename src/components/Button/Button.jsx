@@ -25,7 +25,7 @@ const variants = {
     },
 }
 
-export const Button = ({ string, variant = 'primary', onClick }) => {
+export const Button = ({ string, variant = 'primary', onClick, iconUrl = '' }) => {
     const [currentVariant, setCurrentVariant] = useState(variant);
     const variantStyle = variants[currentVariant];
 
@@ -58,6 +58,7 @@ export const Button = ({ string, variant = 'primary', onClick }) => {
                 ...variantStyle,
             }}>
             {string}
+            {iconUrl && <img src={iconUrl} />}
         </ButtonMaterialUI>
     );
 }
@@ -71,6 +72,14 @@ export const Button = ({ string, variant = 'primary', onClick }) => {
 
 // color: var(--shades-white, #FFF);
 // text-align: center;
+
+// /* Buttons/Buttons */
+// font-family: Manrope;
+// font-size: 16px;
+// font-style: normal;
+// font-weight: 700;
+// line-height: normal;
+// letter-spacing: 0.15px;
 
 // /* Buttons/Buttons */
 // font-family: Manrope;

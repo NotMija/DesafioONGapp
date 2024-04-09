@@ -16,13 +16,14 @@ export const NurseryCard = ({ }) => {
                             <p style={{ fontSize: '14px', fontStyle: 'normal', fontWeight: '700', lineHeight: '16px' }} > students </p>
                         </div>
                     </div>
+
                     <div>
                         {/* Grafica */}
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
                         <Button string='Attendance'/>
-                        <Button string='Edit'/>
+                        <Button string='Edit' iconUrl='src/images/icon/penWhite.svg'/>
                     </div>
                 </CardContent>
             </Card>
