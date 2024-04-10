@@ -1,5 +1,6 @@
 import { Button as ButtonMaterialUI } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { TextCaptionsPages } from "../Text/TextCaptions";
 
 const variants = {
     primary: {
@@ -25,6 +26,17 @@ const variants = {
     },
 }
 
+const variantsPages = {
+    selected: {
+        backgroundColor: '#364F75',
+        color: '#FFFFFF',
+    },
+    unselected: {
+        backgroundColor: 'transparent',
+        color: '#667080',
+    }
+}
+
 export const Button = ({ string, variant = 'primary', onClick, iconUrl = '' }) => {
     const [currentVariant, setCurrentVariant] = useState(variant);
     const variantStyle = variants[currentVariant];
@@ -41,7 +53,7 @@ export const Button = ({ string, variant = 'primary', onClick, iconUrl = '' }) =
 
     return (
         <ButtonMaterialUI
-            onClick={() => console.log('Button clicked!')}
+            onClick={onClick}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             style={{
@@ -63,28 +75,41 @@ export const Button = ({ string, variant = 'primary', onClick, iconUrl = '' }) =
     );
 }
 
+export const ButtonPages = ({ string, variant = 'unselected', onClick, iconUrl = '', currentPage }) => {
+    const [currentVariant, setCurrentVariant] = useState(variant);
+    
+    useEffect(() => {
+        if (string === currentPage) {
+            setCurrentVariant('selected');
+        } else {
+            setCurrentVariant('unselected');
+        }
+    }, [string, currentPage]);
+
+    const variantStyle = variantsPages[currentVariant];
+
+    return (
+        <ButtonMaterialUI
+            onClick={onClick}
+            style={{
+                display: 'flex',
+                height: 'auto',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '8px',
+                minWidth: '32px',
+                backgroundColor: variantStyle.backgroundColor,
+            }}>
+            <TextCaptionsPages string={string} variantStyle={variantStyle}/>
+            {iconUrl && <img src={iconUrl} />}
+        </ButtonMaterialUI>
+    );
+}
+
 // display: flex;
-// padding: 11px 0px;
-// justify-content: space-between;
+// width: 32px;
+// padding: 8px;
+// flex-direction: column;
+// justify-content: center;
 // align-items: center;
-// flex: 1 0 0;
-// align-self: stretch;
-
-// color: var(--shades-white, #FFF);
-// text-align: center;
-
-// /* Buttons/Buttons */
-// font-family: Manrope;
-// font-size: 16px;
-// font-style: normal;
-// font-weight: 700;
-// line-height: normal;
-// letter-spacing: 0.15px;
-
-// /* Buttons/Buttons */
-// font-family: Manrope;
-// font-size: 16px;
-// font-style: normal;
-// font-weight: 700;
-// line-height: normal;
-// letter-spacing: 0.15px;
+// gap: 8px;
