@@ -458,7 +458,7 @@ export const TableAdvocacy = () => {
                         </th>
                     </tr>
                 </thead>
-                <tbody style={{ backgroundColor: '#FFFFF' }}>
+                <tbody style={{ backgroundColor: '#FFFF' }}>
                     {displayedData.map((data, index) => {
                         return (
                             <tr key={index}>
