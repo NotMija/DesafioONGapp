@@ -5,7 +5,7 @@ import { Button } from "../Button/Button";
 
 export const NurseryCard = ({ }) => {
     return (
-        <div style={{padding: '0 0 0 50px'}}>
+        <div style={{ padding: '0 0 0 50px' }}>
             <Card style={{ width: '900px' }}>
                 <CardContent style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '24px' }}>
                     <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
@@ -16,11 +16,14 @@ export const NurseryCard = ({ }) => {
                             <p style={{ fontSize: '14px', fontStyle: 'normal', fontWeight: '700', lineHeight: '16px' }} > students </p>
                         </div>
                     </div>
+
                     <div>
                         {/* Grafica */}
                     </div>
-                    <div style={{ alignContent: 'center' }}>
-                        <Button string='Attendance' />
+
+                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
+                        <Button string='Attendance'/>
+                        <Button string='Edit' iconUrl='src/images/icon/penWhite.svg'/>
                     </div>
                 </CardContent>
             </Card>
