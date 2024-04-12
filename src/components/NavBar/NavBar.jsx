@@ -28,7 +28,7 @@ export const NavBar = () => {
         },
         {
             name: 'Youth',
-            subButtons: []
+            subButtons: ['Computer', 'Retail', 'Office', 'Charts']
         },
         {
             name: 'Food',
