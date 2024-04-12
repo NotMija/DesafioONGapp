@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import { EducationNursery } from './screens/EducationNursery'
 import { EducationLKG } from './screens/EducationLKG'
 import { EducationUKG } from './screens/EducationUKG'
+import { YouthComputer } from './screens/YouthComputer'
 import { Food } from './screens/Food'
 import { Advocacy } from './screens/Advocacy'
 import { Reports } from './screens/Reports'
@@ -19,6 +20,7 @@ export const App = () => {
         <Route path="/nursery" element={<EducationNursery />} />
         <Route path="/LKG" element={<EducationLKG />} />
         <Route path="/UKG" element={<EducationUKG />} />
+        <Route path="/Computer" element={<YouthComputer />} />
         <Route path="/food" element={<Food />} />
         <Route path="/addfood" element={<AddFood />} />
         <Route path="/advocacy" element={<Advocacy />} />
