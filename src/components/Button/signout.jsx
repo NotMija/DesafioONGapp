@@ -7,7 +7,7 @@ class LogoutButton extends React.Component {
     signOut(auth)
       .then(() => {
         // Sign-out successful.
-        window.location.href = "/login";
+        window.location.href = "/";
       })
       .catch((error) => {
   
@@ -23,7 +23,7 @@ class LogoutButton extends React.Component {
           color: "black",
         }}
       >
-        Sign off
+        Sign out
       </button>
     );
   }
