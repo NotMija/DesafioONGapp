@@ -1,0 +1,5 @@
+{
+    "rwrites":  [
+        {"source":"/(.*)", "destination":"/"}
+    ]
+}
