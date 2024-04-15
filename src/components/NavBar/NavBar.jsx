@@ -3,6 +3,7 @@ import { NavBarButton } from './ButtonNavBar';
 import { useState } from 'react';
 import { NavBarSubButton } from './SubButtonNavBar';
 import { Navigate, Outlet, useNavigate } from 'react-router-dom';
+import LogoutButton from "../Button/signout"
 
 export const NavBar = () => {
     const [selectedTab, setSelectedTab] = useState('Dashboard');
@@ -79,6 +80,7 @@ export const NavBar = () => {
                         );
                     })}
                 </Toolbar>
+                <LogoutButton />
             </AppBar>
             <Outlet />
         </div>
