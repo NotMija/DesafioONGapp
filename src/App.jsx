@@ -1,6 +1,7 @@
 import './App.css'
 import { NavBar } from './components/NavBar/NavBar'
 import { LoginPage } from './screens/Login'
+import { LoginPage } from './screens/LoginPage'
 import { Dashboard } from './screens/Dashboard'
 import { Route, Routes } from 'react-router-dom'
 import { EducationNursery } from './screens/EducationNursery'
@@ -18,6 +19,7 @@ export const App = () => {
     <Routes>
       <Route element={<NavBar />}>
         <Route path="/" element={<Login />} />
+        <Route path="/" element={<LoginPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/nursery" element={<EducationNursery />} />
         <Route path="/LKG" element={<EducationLKG />} />
