@@ -26,7 +26,7 @@ export default function Login() {
       await signInWithEmailAndPassword(auth, email, password);
     },
     onSuccess: () => {
-      navigate("/");
+      navigate("/Dashboard");
     },
     onError: (error) => {
       console.error("Error al loguear el usuario:", error);
@@ -42,7 +42,7 @@ export default function Login() {
   const googleLogin = async () => {
     try {
       await signInWithPopup(auth, provider);
-      navigate("/");
+      navigate("/Dashboard");
     } catch (error) {
       console.error("Error al loguear con Google:", error);
     }
