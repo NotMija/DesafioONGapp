@@ -18,14 +18,14 @@ class LogoutButton extends React.Component {
 
   render() {
     return (
-      <button className="align-items: end;"
+      <Button className="align-items: end;"
         onClick={this.handleLogout}
         style={{
           color: "black", background: "white",
         }}
       >
         Sign off
-      </button>
+      </Button>
     );
   }
 }
