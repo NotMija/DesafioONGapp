@@ -5,7 +5,7 @@ export const EducationUKG
     = () => {
         return (
             <div style={{ width: '100%', minHeight: '100vh', backgroundColor: '#E4EBF7' }}>
-                <TextH2 iconUrl='public/icon/DashboardOrange.svg' name='Education / UKG' />
+                <TextH2 iconUrl='/icon/DashboardOrange.svg' name='Education / UKG' />
                 <div style={{ display: 'flex', flexDirection: 'row', gap: '24px', padding: '0 0 0 50px', flexWrap: 'wrap' }}>
                     <EducationCards
                         name='UKG childs for 5-6 years old'
