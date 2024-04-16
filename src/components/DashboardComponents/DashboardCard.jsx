@@ -19,7 +19,7 @@ export const DashboardCard = ({ name, iconUrl, date, percentage, dateString, des
                 </div>
                 <div style={{ display: "flex", flexDirection: "row", gap: "16px" }}>
                     <div style={{ display: "flex", flexDirection: "row", gap: "8px" }}>
-                        <img src='src/images/icon/VectorAbajo.svg' alt='down' />
+                        <img src='src/public/icon/VectorAbajo.svg' alt='down' />
                         <TextCaptionsBold string={percentage} />
                     </div>
                     <TextCaptions string={'since ' + dateString} />

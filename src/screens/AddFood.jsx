@@ -83,7 +83,7 @@ export const AddFood = () => {
 
     return (
         <Container maxWidth="sm">
-            <TextH2 iconUrl='src/images/icon/FoodOrange.svg' name='Food' />
+            <TextH2 iconUrl='public/icon/FoodOrange.svg' name='Food' />
             <Card sx={{ borderRadius: '16px' }}>
                 <CardContent style={{ textAlign: 'left', margin:'10px', padding:'10px' }}>
                     <div className="seccion">

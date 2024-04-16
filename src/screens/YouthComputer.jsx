@@ -4,7 +4,7 @@ import { YouthCards } from "../components/YouthComponents/YouthCards";
 export const YouthComputer = () => {
     return (
         <div style={{ width: '100%', minHeight: '100vh', backgroundColor: '#E4EBF7' }}>
-            <TextH2 iconUrl='src/images/icon/YouthOrange.svg' name='Youth / Computer' />
+            <TextH2 iconUrl='public/icon/YouthOrange.svg' name='Youth / Computer' />
             <div style={{ display: 'flex', flexDirection: 'row', gap: '24px', padding: '0 0 0 50px', flexWrap: 'wrap' }}>
                 <YouthCards
                     nameClass='Class A'

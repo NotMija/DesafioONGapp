@@ -476,7 +476,7 @@ export const TableAdvocacy = () => {
                                 </td>
                                 <td style={{ padding: '16px' }}>
                                     <button style={{ background: 'none', border: 'none' }} onClick={() => console.log('funciona')}>
-                                        <img src='src/images/icon/pen.svg' alt="edit" />
+                                        <img src='public/icon/pen.svg' alt="edit" />
                                     </button>
                                 </td>
                             </tr>
