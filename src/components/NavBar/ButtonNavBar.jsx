@@ -14,14 +14,14 @@ export const NavBarButton = ({ selectedTab, handleClick, tabName, showSubButtons
             }}
             onClick={() => handleClick(tabName)}
         >
-            <img src={`src/images/icon/${tabName}.svg`} alt={tabName} />
+            <img src={`public/icon/${tabName}.svg`} alt={tabName} />
             {tabName}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: 'auto'}}>
                 {showSubButtons !== undefined ?
                     showSubButtons ?
-                    <img src="src/images/icon/arrowClose.svg" alt="arrow-up" />
+                    <img src="public/icon/arrowClose.svg" alt="arrow-up" />
                     :
-                    <img src="src/images/icon/arrowOpen.svg" alt="arrow-down" />
+                    <img src="public/icon/arrowOpen.svg" alt="arrow-down" />
                 :
                 null
                 }

@@ -23,7 +23,7 @@ export const NurseryCard = ({ }) => {
 
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
                         <Button string='Attendance'/>
-                        <Button string='Edit' iconUrl='src/images/icon/penWhite.svg'/>
+                        <Button string='Edit' iconUrl='public/icon/penWhite.svg'/>
                     </div>
                 </CardContent>
             </Card>
