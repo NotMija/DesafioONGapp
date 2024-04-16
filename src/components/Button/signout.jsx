@@ -1,5 +1,6 @@
 import React from "react";
 import { getAuth, signOut } from "firebase/auth";
+import { Box, Button, Card, Checkbox, FormControlLabel, TextField } from "@mui/material";
 
 class LogoutButton extends React.Component {
   handleLogout = () => {
@@ -7,7 +8,7 @@ class LogoutButton extends React.Component {
     signOut(auth)
       .then(() => {
         // Sign-out successful.
-        window.location.href = "/login";
+        window.location.href = "/";
       })
       .catch((error) => {
   
@@ -17,14 +18,14 @@ class LogoutButton extends React.Component {
 
   render() {
     return (
-      <button className="align-items: end;"
+      <Button className="align-items: end;"
         onClick={this.handleLogout}
         style={{
-          color: "black",
+          color: "black", background: "white",
         }}
       >
         Sign off
-      </button>
+      </Button>
     );
   }
 }

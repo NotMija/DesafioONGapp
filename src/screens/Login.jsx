@@ -1,4 +1,4 @@
-import { Box, Button } from "@mui/material";
+import { Box, Button, Card, Checkbox, FormControlLabel, TextField } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
@@ -56,42 +56,74 @@ export default function Login() {
   };
 
   return (
-    <div className="container mx-auto flex justify-center items-center flex-col min-h-[100vh] gap-8">
-      <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="email">
-          Email
-          <input
-            type="email"
-            autoComplete="username"
-            className="input"
-            {...register("email", { required: true })}
+    <Box
+      sx={{
+        height: '100vh',
+        width: '100vw',
+        backgroundImage: 'url(https://www.meraparivar.org/wp-content/uploads/2022/07/WhatsApp-Image-2024-04-02-at-1.52.28-PM-2.jpeg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'relative',
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(255, 255, 255, 0.7)',
+        },
+      }}
+    >
+      <Card
+        raised
+        sx={{
+          position: 'relative',
+          zIndex: 2,
+          p: 4,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 2,
+        }}
+      >
+        <img src="https://www.meraparivar.org/wp-content/uploads/2022/03/mera-parivar-ngo_edited.png" alt="Mera Parivar" style={{ width: '150px', marginBottom: '1rem' }} />
+        <form onSubmit={handleSubmit(onSubmit)} style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <TextField 
+            label="Username" 
+            variant="outlined" 
+            fullWidth 
+            {...register("email", { required: true })} 
+            error={!!errors.email} 
+            helperText={errors.email ? "This field is required" : ""} 
           />
-          {errors.email && <span>This field is required</span>}
-        </label>
-        <label htmlFor="password">
-          Password
-          <input
-            type="password"
-            className="input"
-            autoComplete="current-password"
-            {...register("password", { required: true })}
+          <TextField 
+            label="Password" 
+            type="password" 
+            variant="outlined" 
+            fullWidth 
+            {...register("password", { required: true })} 
+            error={!!errors.password} 
+            helperText={errors.password ? "This field is required" : ""}
           />
-          {errors.password && <span>This field is required</span>}
-        </label>
-        <input
-          className="button"
-          type="submit"
-          disabled={isLoading}
-        />
-      </form>
-      <Button className="button" onClick={googleLogin} disabled={isLoading}>
-        Login with Google
-      </Button>
-
-      <Button className="button" onClick={registerSinup} disabled={isLoading}>
-      New account
-      </Button> 
-
-    </div>
+          <FormControlLabel 
+            control={<Checkbox />} 
+            label="Remember password" 
+          />
+          <Button type="submit" variant="contained" fullWidth disabled={isLoading}>
+            Login
+          </Button>
+        </form>
+        <Button variant="outlined" onClick={googleLogin} fullWidth disabled={isLoading}>
+          Login with Google
+        </Button>
+        <Button variant="text" onClick={registerSinup} fullWidth disabled={isLoading}>
+          New account
+        </Button>
+      </Card>
+    </Box>
   );
 }
